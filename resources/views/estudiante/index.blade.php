@@ -42,6 +42,7 @@
 				<td>{{ $estudiante->edad }}</td>
 				<td>{{ $estudiante->email }}</td>
 				<td>{{ $estudiante->telefono }}</td>
+				
 				<td>{{ $estudiante->id_grupo }}</td>
 				<td> 
 					<a href="{{ url('/estudiante/'.$estudiante->id_estudiante.'/edit') }}" class="btn btn-success">Editar</a>
@@ -56,6 +57,7 @@
 				</td>
 			</tr>
 			@endforeach
+			
 		</tbody>
 
 	</table>

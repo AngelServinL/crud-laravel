@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
  
 use App\Estudiante;
+use App\Grupo;
 use Illuminate\Http\Request;
 
 class EstudianteController extends Controller
@@ -15,8 +16,9 @@ class EstudianteController extends Controller
     public function index()
     {
         // 
-        $datos ['estudiantes'] = Estudiante::paginate(2);
-        return view('estudiante.index',$datos);
+        $datos ['estudiantes'] = Estudiante::paginate(4);
+        $dato2 ['grupos'] = Grupo::paginate(4);
+        return view('estudiante.index',$datos,$dato2);
         
 
     }
